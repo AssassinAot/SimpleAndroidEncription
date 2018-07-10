@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
          String encryptedTextFromios = "ncX4Ya8fRWJSkLywftAmbr8QHEbrFhnVpNINSoO3dxSLVedrBqWRVKQYKVbNmoljwY9ewbAmrnKov4d0EjLHbDJ5ccQtD7yz6lpY6LjXN3OuxXozXxw+576lxwkcGaX3";
          String exchangeKey = "dskmpadjosa";
 
-         String yourResponse = "YourPlainTextOrWhatEver";
+         String yourResponse = "Your Plan Text Or What Ever This is genereted from android";
         try {
             CryptLib cryptLib = new CryptLib();
             //DecryptionTextFromNodeOrIos
