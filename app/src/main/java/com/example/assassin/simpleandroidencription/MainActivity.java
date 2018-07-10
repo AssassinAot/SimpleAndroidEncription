@@ -14,15 +14,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-         String EncryptedtextFromNodeJS = "+6OMoj9Xi0a42XFWHtboMAgNPRFv785ajCJ61qxjRLHsalZeyGueEn/yKuI5+Ar2KELz9csYnxcbUa/jRuVTHW616UrWI2/oMiOqXUy348fL6yFJFztdCu5wvf9AkkrMP1rcxF9bM4HaQP1HJ6fy25pOlcUf0EEYFuzz53Hal2s=";
+         String encryptedTextFromNodeJS = "+6OMoj9Xi0a42XFWHtboMAgNPRFv785ajCJ61qxjRLHsalZeyGueEn/yKuI5+Ar2KELz9csYnxcbUa/jRuVTHW616UrWI2/oMiOqXUy348fL6yFJFztdCu5wvf9AkkrMP1rcxF9bM4HaQP1HJ6fy25pOlcUf0EEYFuzz53Hal2s=";
+
+         String encryptedTextFromios = "ncX4Ya8fRWJSkLywftAmbr8QHEbrFhnVpNINSoO3dxSLVedrBqWRVKQYKVbNmoljwY9ewbAmrnKov4d0EjLHbDJ5ccQtD7yz6lpY6LjXN3OuxXozXxw+576lxwkcGaX3";
          String exchangeKey = "dskmpadjosa";
 
          String yourResponse = "YourPlainTextOrWhatEver";
         try {
             CryptLib cryptLib = new CryptLib();
             //DecryptionTextFromNodeOrIos
-            String decryptedText = cryptLib.decryptCipherTextWithRandomIV(EncryptedtextFromNodeJS,exchangeKey);
+            String decryptedText = cryptLib.decryptCipherTextWithRandomIV(encryptedTextFromNodeJS,exchangeKey);
             Log.d("DECRYPT TXT IS==>", decryptedText);
+            String decryptedText1 = cryptLib.decryptCipherTextWithRandomIV(encryptedTextFromios,exchangeKey);
+            Log.d("DECRYPT1 TXT IS==>", decryptedText1);
+
 
             JSONArray objectDecryption = new JSONArray(decryptedText);
             //Please use debugMode here to see JSONArrayValue/JSONObject after parse
